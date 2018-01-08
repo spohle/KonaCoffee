@@ -21,6 +21,7 @@ class ViewControllerMain: UITabBarController {
         self.tabBar.barTintColor = UIColor.ThemeTab.barTint
         self.tabBar.tintColor = UIColor.ThemeTab.barText
         
+        
         self.createTabBarItems()
     }
     
@@ -28,6 +29,8 @@ class ViewControllerMain: UITabBarController {
         let mapVC = ViewControllerMap()
         let mapImage = resizeImage(image: UIImage(named: "Icon_Map")!, newWidth: 30)?.tintWithColor(color: UIColor.orange)
         mapVC.tabBarItem = UITabBarItem(title: "Map", image: mapImage, tag: 0)
+        mapVC.tabBarItem.setTitleTextAttributes([NSAttributedStringKey.foregroundColor: UIColor.orange], for:.selected)
+        
         
         let mapVC2 = ViewControllerMap()
         mapVC2.tabBarItem = UITabBarItem(title: "MAP2", image: nil, tag: 1)
