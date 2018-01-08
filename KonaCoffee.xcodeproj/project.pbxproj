@@ -8,20 +8,24 @@
 
 /* Begin PBXBuildFile section */
 		5701E5AF2001E81A00501670 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5701E5AE2001E81A00501670 /* AppDelegate.swift */; };
-		5701E5B12001E81A00501670 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5701E5B02001E81A00501670 /* ViewController.swift */; };
-		5701E5B42001E81A00501670 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5701E5B22001E81A00501670 /* Main.storyboard */; };
 		5701E5B62001E81A00501670 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5701E5B52001E81A00501670 /* Assets.xcassets */; };
 		5701E5B92001E81A00501670 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5701E5B72001E81A00501670 /* LaunchScreen.storyboard */; };
+		5701E5C12001E8D300501670 /* ViewControllerMain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5701E5C02001E8D300501670 /* ViewControllerMain.swift */; };
+		5701E5C42001EC2700501670 /* ViewControllerMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5701E5C32001EC2700501670 /* ViewControllerMap.swift */; };
+		57B8A1682002A5E700E54AA6 /* colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57B8A1672002A5E700E54AA6 /* colors.swift */; };
+		57B8A16A2002AC0800E54AA6 /* utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57B8A1692002AC0800E54AA6 /* utils.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		5701E5AB2001E81A00501670 /* KonaCoffee.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KonaCoffee.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5701E5AE2001E81A00501670 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		5701E5B02001E81A00501670 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		5701E5B32001E81A00501670 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5701E5B52001E81A00501670 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5701E5B82001E81A00501670 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5701E5BA2001E81A00501670 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5701E5C02001E8D300501670 /* ViewControllerMain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerMain.swift; sourceTree = "<group>"; };
+		5701E5C32001EC2700501670 /* ViewControllerMap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerMap.swift; sourceTree = "<group>"; };
+		57B8A1672002A5E700E54AA6 /* colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = colors.swift; sourceTree = "<group>"; };
+		57B8A1692002AC0800E54AA6 /* utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = utils.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +58,32 @@
 		5701E5AD2001E81A00501670 /* KonaCoffee */ = {
 			isa = PBXGroup;
 			children = (
+				57B8A16B2002AFC900E54AA6 /* utils */,
+				5701E5C22001E8DA00501670 /* ViewControllers */,
 				5701E5AE2001E81A00501670 /* AppDelegate.swift */,
-				5701E5B02001E81A00501670 /* ViewController.swift */,
-				5701E5B22001E81A00501670 /* Main.storyboard */,
 				5701E5B52001E81A00501670 /* Assets.xcassets */,
 				5701E5B72001E81A00501670 /* LaunchScreen.storyboard */,
 				5701E5BA2001E81A00501670 /* Info.plist */,
 			);
 			path = KonaCoffee;
+			sourceTree = "<group>";
+		};
+		5701E5C22001E8DA00501670 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				5701E5C02001E8D300501670 /* ViewControllerMain.swift */,
+				5701E5C32001EC2700501670 /* ViewControllerMap.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		57B8A16B2002AFC900E54AA6 /* utils */ = {
+			isa = PBXGroup;
+			children = (
+				57B8A1672002A5E700E54AA6 /* colors.swift */,
+				57B8A1692002AC0800E54AA6 /* utils.swift */,
+			);
+			path = utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -125,7 +147,6 @@
 			files = (
 				5701E5B92001E81A00501670 /* LaunchScreen.storyboard in Resources */,
 				5701E5B62001E81A00501670 /* Assets.xcassets in Resources */,
-				5701E5B42001E81A00501670 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -136,22 +157,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5701E5B12001E81A00501670 /* ViewController.swift in Sources */,
+				57B8A16A2002AC0800E54AA6 /* utils.swift in Sources */,
+				5701E5C12001E8D300501670 /* ViewControllerMain.swift in Sources */,
 				5701E5AF2001E81A00501670 /* AppDelegate.swift in Sources */,
+				5701E5C42001EC2700501670 /* ViewControllerMap.swift in Sources */,
+				57B8A1682002A5E700E54AA6 /* colors.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		5701E5B22001E81A00501670 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				5701E5B32001E81A00501670 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		5701E5B72001E81A00501670 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
