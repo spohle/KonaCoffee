@@ -26,19 +26,18 @@ class ViewControllerMain: UITabBarController {
     }
     
     func createTabBarItems() {
-        let mapVC = ViewControllerMap()
+        let viewControllerMap = ViewControllerMap()
         let mapImage = resizeImage(image: UIImage(named: "Icon_Map")!, newWidth: 30)?.tintWithColor(color: UIColor.orange)
-        mapVC.tabBarItem = UITabBarItem(title: "Map", image: mapImage, tag: 0)
-        mapVC.tabBarItem.setTitleTextAttributes([NSAttributedStringKey.foregroundColor: UIColor.orange], for:.selected)
+        viewControllerMap.tabBarItem = UITabBarItem(title: "Map", image: mapImage, tag: 0)
+        viewControllerMap.tabBarItem.setTitleTextAttributes([NSAttributedStringKey.foregroundColor: UIColor.lightGray], for: .normal)
+        viewControllerMap.tabBarItem.setTitleTextAttributes([NSAttributedStringKey.foregroundColor: UIColor.orange], for: .selected)
         
         
-        let mapVC2 = ViewControllerMap()
-        mapVC2.tabBarItem = UITabBarItem(title: "MAP2", image: nil, tag: 1)
+        let mapVC2 = ViewControllerList()
+        mapVC2.tabBarItem = UITabBarItem(title: "List", image: nil, tag: 1)
         
-        let mapVC3 = ViewControllerMap()
-        mapVC3.tabBarItem = UITabBarItem(title: "MAP3", image: nil, tag: 2)
-        
-        let controllers = [mapVC, mapVC2, mapVC3]
+       
+        let controllers = [viewControllerMap, mapVC2]
         self.viewControllers = controllers
     }
     

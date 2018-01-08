@@ -7,29 +7,67 @@
 //
 
 import UIKit
+import MapKit
 
 class ViewControllerMap: UIViewController {
-
+    
+    lazy var mapView: MKMapView = {
+        let view = MKMapView(frame: self.view.frame)
+    
+        let coordinates = CLLocationCoordinate2D(latitude: 35.636876, longitude: -120.654502)
+        let camera = MKMapCamera(lookingAtCenter: coordinates, fromDistance: 100000, pitch: 0, heading: 0)
+        
+        view.setCamera(camera, animated: true)
+        view.mapType = .mutedStandard
+        view.showsCompass = false
+        
+        return view
+    }()
+    
+    lazy var mapCompassView: MKCompassButton = {
+        let view = MKCompassButton(mapView: mapView)
+        view.compassVisibility = .adaptive
+        
+        return view
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+        
+        self.view.backgroundColor = UIColor.ThemeMap.background
+        
+        self.view.addSubview(mapView)
+        self.setupMapView()
+        
+        self.view.addSubview(mapCompassView)
+        self.setupMapCompassView()
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    func setupMapView() {
+        mapView.centerXAnchor.constraint(equalTo: self.view.centerXAnchor).isActive = true
+        mapView.centerYAnchor.constraint(equalTo: self.view.centerYAnchor).isActive = true
+        mapView.heightAnchor.constraint(equalTo: self.view.heightAnchor).isActive = true
+        mapView.widthAnchor.constraint(equalTo: self.view.widthAnchor).isActive = true
+        
+        mapView.translatesAutoresizingMaskIntoConstraints = false
     }
-    */
-
+    
+    func setupMapCompassView() {
+        mapCompassView.centerXAnchor.constraint(equalTo: self.view.centerXAnchor, constant: 0)
+        mapCompassView.centerYAnchor.constraint(equalTo: self.view.centerYAnchor, constant: 0)
+        
+        mapCompassView.translatesAutoresizingMaskIntoConstraints = false
+    }
 }
+
+
+
+
+
+
+
+
+
+
+
+

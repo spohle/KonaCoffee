@@ -22,4 +22,12 @@ public extension UIColor {
         static var barTint: UIColor { return UIColor(r: 20, g: 20, b: 20) }
         static var barText: UIColor { return UIColor.white }
     }
+    
+    struct ThemeMap {
+        static var background: UIColor { return UIColor.cyan }
+    }
+    
+    struct ThemeList {
+        static var background: UIColor { return UIColor.lightGray }
+    }
 }
