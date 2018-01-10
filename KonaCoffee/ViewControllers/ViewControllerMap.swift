@@ -14,7 +14,7 @@ class ViewControllerMap: UIViewController {
     lazy var mapView: MKMapView = {
         let view = MKMapView(frame: self.view.frame)
     
-        let coordinates = CLLocationCoordinate2D(latitude: 35.636876, longitude: -120.654502)
+        let coordinates = CLLocationCoordinate2D(latitude: 19.639994, longitude: -155.996933)
         let camera = MKMapCamera(lookingAtCenter: coordinates, fromDistance: 100000, pitch: 0, heading: 0)
         
         view.setCamera(camera, animated: true)
